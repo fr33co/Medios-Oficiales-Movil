@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!--<link rel="stylesheet" href="css/ciudad_maracay.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile.structure-1.4.4.min.css" />-->
+        		<!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+		<!-- jQueryMobileCSS - original without styling -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+
+		<!-- nativeDroid core CSS -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+
+		<!-- nativeDroid: Light/Dark -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
+
+		<!-- nativeDroid: Color Schemes -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.blue.css" id='jQMnDColor' />
+        <link rel="stylesheet" href="css/FeedEk.css" />
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script> 
+        <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+        <script src="js/FeedEk.js"></script>
+        <style>
+            .catuche{ width: 40% !important; }
+            .panel{ text-align: center; width: 100%; }
+            .td-l{ height: 130px; width: 48%; margin-right: 2%; }
+            .td-r{ height: 130px; width: 48%; margin-left:  2%;}
+            .yop{width: 100%;}
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div data-role="page" id="panel-home" data-title="Panel responsive page" data-url="panel-home" data-theme="b">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+               <h1>Medios Oficiales</h1>
+               <a href="#nav-panel"><i class="fa fa-bars"></i></a>
+            </div><!-- /header -->
+            <div data-role="content" style="padding: 4%;">
+                <h1>Paginas Registradas</h1>
+                <table style="width: 100%;">
+                    <tr>
+                        <td class="message info td-l">
+                            <a href="#panel-vtv"><img class="panel" src="img/vtv.png"/></a>
+                        </td>
+                        <td class="message warning td-r">
+                            <a href="#panel-correo-orinoco">
+                                <img src="img/co.png" class="panel" />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="message success td-l">
+                            <a href="#panel-yvke"><img class="panel" src="img/yvke.png"/></a>
+                        </td>
+                        <td class="td-r message error">
+                            <a href="#panel-avn">
+                                <img src="img/avn.png" class="panel" />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-l message info">
+                            <a href="#panel-rnv"><img class="panel" src="img/rnv.png"/></a>
+                        </td>
+                        <td class="td-r message success">
+                            <a href="#panel-ciudad-mcy">
+                                <img src="img/ciudad-mcy.jpg" class="panel" />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-l message warning">
+                            <a href="#panel-la-iguana"><img class="panel" src="img/iguana.png"/></a>
+                        </td>
+                        <td class="td-r message error"><center>
+                            <a href="#panel-ola-bolivariana" class="yop">
+                                <img src="img/ola.jpg" class="panel" />
+                            </a></center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-l">
+                            
+                        </td>
+                        <td class="message success td-r">
+                            <a href="#panel-actualidadRT">
+                                <img src="img/rt.png" class="panel" />
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                
+                
+                
+            </div><!-- /content -->
+            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#panel-home">Pizarra</a></li>
+                    <li><a href="#panel-vtv">VTV</a></li>
+                    <li><a href="#panel-correo-orinoco">Correo del Orinoco</a></li>
+                    <li><a href="#panel-yvke">YVKE</a></li>
+                    <li><a href="#panel-avn">AVN</a></li>
+                    <li><a href="#panel-rnv">RNV</a></li>
+                    <li><a href="#panel-ciudad-mcy">Ciudad Maracay</a></li>
+                    <li><a href="#panel-la-iguana">La Iguana</a></li>
+                    <li><a href="#panel-ola-bolivariana">Ola Bolivariana</a></li>
+                    <li><a href="#panel-actualidadRT">ActualidadRT</a></li>
+                </ul>
+            </div><!-- /panel -->
+        </div>
+        <!-- Page de VTV  -->
+        <div data-role="page" id="panel-vtv" data-url="panel-vtv" data-theme="b">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+               <h1>VTV</h1>
+               <a href="#nav-panel"><i class="fa fa-bars"></i></a>
+               <a href="#refresh-vtv" id="refresh-vtv" data-rel="refresh-vtv">
+                   <i class="fa fa-refresh"></i></a>
+            </div><!-- /header -->
+            <div data-role="content"><div id="vtv"></div></div><!-- /content -->
+            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#panel-home">Pizarra</a></li>
+                    <li><a href="#panel-vtv">VTV</a></li>
+                    <li><a href="#panel-correo-orinoco">Correo del Orinoco</a></li>
+                    <li><a href="#panel-yvke">YVKE</a></li>
+                    <li><a href="#panel-avn">AVN</a></li>
+                    <li><a href="#panel-rnv">RNV</a></li>
+                    <li><a href="#panel-ciudad-mcy">Ciudad Maracay</a></li>
+                    <li><a href="#panel-la-iguana">La Iguana</a></li>
+                    <li><a href="#panel-ola-bolivariana">Ola Bolivariana</a></li>
+                    <li><a href="#panel-actualidadRT">ActualidadRT</a></li>
+                </ul>
+            </div><!-- /panel -->
+        </div>
+        <!-- Page del Correo del Orinoco  -->
+        <div data-role="page" id="panel-correo-orinoco"  data-url="panel-correo-orinoco" data-theme="b">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+               <h1>Correo del Orinoco</h1>
+               <a href="#nav-panel"><i class="fa fa-bars"></i></a>
+               <a href="#refresh-co" id="refresh-co" data-rel="refresh-co">
+                   <i class="fa fa-refresh"></i></a>
+            </div><!-- /header -->
+            <div data-role="content">
+                <div id="correo-orinoco"></div> 
+            </div><!-- /content -->
+            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#panel-home">Pizarra</a></li>
+                    <li><a href="#panel-vtv">VTV</a></li>
+                    <li><a href="#panel-correo-orinoco">Correo del Orinoco</a></li>
+                    <li><a href="#panel-yvke">YVKE</a></li>
+                    <li><a href="#panel-avn">AVN</a></li>
+                    <li><a href="#panel-rnv">RNV</a></li>
+                    <li><a href="#panel-ciudad-mcy">Ciudad Maracay</a></li>
+                    <li><a href="#panel-la-iguana">La Iguana</a></li>
+                    <li><a href="#panel-ola-bolivariana">Ola Bolivariana</a></li>
+                    <li><a href="#panel-actualidadRT">ActualidadRT</a></li>
+                </ul>
+            </div><!-- /panel -->
+        </div>
+        <!-- Page de YVKE Mundial  -->
+        <div data-role="page" data-theme='b' id="panel-yvke" data-url="panel-yvke">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+               <h1>YVKE Mundial</h1>
+               <a href="#nav-panel"><i class="fa fa-bars"></i></a>
+               <a href="#refresh-yvke" id="refresh-yvke" data-rel="refresh-yvke" >
+                   <i class="fa fa-refresh"></i></a>
+            </div><!-- /header -->
+            <div data-role="content"><div id="yvke"></div></div><!-- /content -->
+            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#panel-home">Pizarra</a></li>
+                    <li><a href="#panel-vtv">VTV</a></li>
+                    <li><a href="#panel-correo-orinoco">Correo del Orinoco</a></li>
+                    <li><a href="#panel-yvke">YVKE</a></li>
+                    <li><a href="#panel-avn">AVN</a></li>
+                    <li><a href="#panel-rnv">RNV</a></li>
+                    <li><a href="#panel-ciudad-mcy">Ciudad Maracay</a></li>
+                    <li><a href="#panel-la-iguana">La Iguana</a></li>
+                    <li><a href="#panel-ola-bolivariana">Ola Bolivariana</a></li>
+                    <li><a href="#panel-actualidadRT">ActualidadRT</a></li>
+                </ul>
+            </div><!-- /panel -->
+        </div>
+        <!-- Page del Ciudad Maracay  -->
+        <div data-role="page" data-theme='b' id="panel-avn" data-url="panel-avn">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+               <h1>Agencia Venezolana de Noticias</h1>
+               <a href="#nav-panel"><i class="fa fa-bars"></i></a>
+               <a href="#refresh-avn" id="refresh-avn" data-rel="refresh-avn">
+                   <i class="fa fa-refresh"></i></a>
+            </div><!-- /header -->
+            <div data-role="content"><div id="avn"></div></div><!-- /content -->
+            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#panel-home">Pizarra</a></li>
+                    <li><a href="#panel-vtv">VTV</a></li>
+                    <li><a href="#panel-correo-orinoco">Correo del Orinoco</a></li>
+                    <li><a href="#panel-yvke">YVKE</a></li>
+                    <li><a href="#panel-avn">AVN</a></li>
+                    <li><a href="#panel-rnv">RNV</a></li>
+                    <li><a href="#panel-ciudad-mcy">Ciudad Maracay</a></li>
+                    <li><a href="#panel-la-iguana">La Iguana</a></li>
+                    <li><a href="#panel-ola-bolivariana">Ola Bolivariana</a></li>
+                    <li><a href="#panel-actualidadRT">ActualidadRT</a></li>
+                </ul>
+            </div><!-- /panel -->
+        </div>
+        <!-- Page de RNV  -->
+        <div data-role="page" data-theme='b' id="panel-rnv" data-url="panel-rnv">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+               <h1>Radio Nacional Venezuela</h1>
+               <a href="#nav-panel"><i class="fa fa-bars"></i></a>
+               <a href="#refresh-rnv" id="refresh-rnv" data-rel="refresh-rnv">
+                   <i class="fa fa-refresh"></i></a>
+            </div><!-- /header -->
+            <div data-role="content"><div id="rnv"></div></div><!-- /content -->
+            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#panel-home">Pizarra</a></li>
+                    <li><a href="#panel-vtv">VTV</a></li>
+                    <li><a href="#panel-correo-orinoco">Correo del Orinoco</a></li>
+                    <li><a href="#panel-yvke">YVKE</a></li>
+                    <li><a href="#panel-avn">AVN</a></li>
+                    <li><a href="#panel-rnv">RNV</a></li>
+                    <li><a href="#panel-ciudad-mcy">Ciudad Maracay</a></li>
+                    <li><a href="#panel-la-iguana">La Iguana</a></li>
+                    <li><a href="#panel-ola-bolivariana">Ola Bolivariana</a></li>
+                    <li><a href="#panel-actualidadRT">ActualidadRT</a></li>
+                </ul>
+            </div><!-- /panel -->
+        </div>
+        <!-- Page del Ciudad Maracay  -->
+        <div data-role="page" data-theme='b' id="panel-ciudad-mcy" data-url="panel-ciudad-mcy">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+               <h1>Ciudad MCY</h1>
+               <a href="#nav-panel"><i class="fa fa-bars"></i></a>
+               <a href="#refresh-mcy" id="refresh-mcy" data-rel="refresh-mcy">
+                   <i class="fa fa-refresh"></i></a>
+            </div><!-- /header -->
+            <div data-role="content"><div id="ciudad-mcy"></div></div><!-- /content -->
+            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#panel-home">Pizarra</a></li>
+                    <li><a href="#panel-vtv">VTV</a></li>
+                    <li><a href="#panel-correo-orinoco">Correo del Orinoco</a></li>
+                    <li><a href="#panel-yvke">YVKE</a></li>
+                    <li><a href="#panel-avn">AVN</a></li>
+                    <li><a href="#panel-rnv">RNV</a></li>
+                    <li><a href="#panel-ciudad-mcy">Ciudad Maracay</a></li>
+                    <li><a href="#panel-la-iguana">La Iguana</a></li>
+                    <li><a href="#panel-ola-bolivariana">Ola Bolivariana</a></li>
+                    <li><a href="#panel-actualidadRT">ActualidadRT</a></li>
+                </ul>
+            </div><!-- /panel -->
+        </div>
+        <!-- Page de La Iguana  -->
+        <div data-role="page" data-theme='b' id="panel-la-iguana" data-url="panel-la-iguana">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+               <h1>La Iguana</h1>
+               <a href="#nav-panel"><i class="fa fa-bars"></i></a>
+               <a href="#refresh-lg" id="refresh-lg" data-rel="refresh-lg">
+                   <i class="fa fa-refresh"></i></a>
+            </div><!-- /header -->
+            <div data-role="content"><div id="laiguana"></div></div><!-- /content -->
+            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#panel-home">Pizarra</a></li>
+                    <li><a href="#panel-vtv">VTV</a></li>
+                    <li><a href="#panel-correo-orinoco">Correo del Orinoco</a></li>
+                    <li><a href="#panel-yvke">YVKE</a></li>
+                    <li><a href="#panel-avn">AVN</a></li>
+                    <li><a href="#panel-rnv">RNV</a></li>
+                    <li><a href="#panel-ciudad-mcy">Ciudad Maracay</a></li>
+                    <li><a href="#panel-la-iguana">La Iguana</a></li>
+                    <li><a href="#panel-ola-bolivariana">Ola Bolivariana</a></li>
+                    <li><a href="#panel-actualidadRT">ActualidadRT</a></li>
+                </ul>
+            </div><!-- /panel -->
+        </div>
+        <!-- Page de Ola Bolivariana  -->
+        <div data-role="page" data-theme='b' id="panel-ola-bolivariana" data-url="panel-ola-bolivariana">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+               <h1>Ola Bolivariana</h1>
+               <a href="#nav-panel"><i class="fa fa-bars"></i></a>
+               <a href="#refresh-ola" id="refresh-ola" data-rel="refresh-ola">
+                   <i class="fa fa-refresh"></i></a>
+            </div><!-- /header -->
+            <div data-role="content"><div id="olabolivariana"></div></div><!-- /content -->
+            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#panel-home">Pizarra</a></li>
+                    <li><a href="#panel-vtv">VTV</a></li>
+                    <li><a href="#panel-correo-orinoco">Correo del Orinoco</a></li>
+                    <li><a href="#panel-yvke">YVKE</a></li>
+                    <li><a href="#panel-avn">AVN</a></li>
+                    <li><a href="#panel-rnv">RNV</a></li>
+                    <li><a href="#panel-ciudad-mcy">Ciudad Maracay</a></li>
+                    <li><a href="#panel-la-iguana">La Iguana</a></li>
+                    <li><a href="#panel-ola-bolivariana">Ola Bolivariana</a></li>
+                    <li><a href="#panel-actualidadRT">ActualidadRT</a></li>
+                </ul>
+            </div><!-- /panel -->
+        </div>
+        <!-- Page de ActualidadRT  -->
+        <div data-role="page" data-theme='b' id="panel-actualidadRT" data-url="panel-actualidadRT">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+               <h1>ActualidadRT</h1>
+               <a href="#nav-panel"><i class="fa fa-bars"></i></a>
+               <a href="#refresh-art" id="refresh-art" data-rel="refresh-art">
+                   <i class="fa fa-refresh"></i></a>
+            </div><!-- /header -->
+            <div data-data-role="content"><div id="actualidad"></div></div><!-- /content -->
+            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#panel-home">Pizarra</a></li>
+                    <li><a href="#panel-vtv">VTV</a></li>
+                    <li><a href="#panel-correo-orinoco">Correo del Orinoco</a></li>
+                    <li><a href="#panel-yvke">YVKE</a></li>
+                    <li><a href="#panel-avn">AVN</a></li>
+                    <li><a href="#panel-rnv">RNV</a></li>
+                    <li><a href="#panel-ciudad-mcy">Ciudad Maracay</a></li>
+                    <li><a href="#panel-la-iguana">La Iguana</a></li>
+                    <li><a href="#panel-ola-bolivariana">Ola Bolivariana</a></li>
+                    <li><a href="#panel-actualidadRT">ActualidadRT</a></li>
+                </ul>
+            </div><!-- /panel -->
+        </div>
+        <!-- Page del Dialogo -->
+        <div data-role="page" id="dialogPage" data-theme="b">
+            <div data-role="header" data-tap-toggle="false" data-theme="b">
+                <h2>Medios Oficiales</h2></div>
+            <div data-role="content">
+                <h3 style="text-align: center;">Lector Noticias Actualizado para:</h3>
+                <p id="act" style="text-align: center;"></p>
+                <center><img class="catuche" src="img/catuche.png" /><br></center>
+            </div>
+            <div data-role="footer" data-tap-toggle="false" data-theme="b">
+                <center><a href='#' data-rel='back' data-icon='delete' data-iconpos='left' data-role='button' data-inline='true'>Cerrar</a></center>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
+<script type="text/javascript">
+$(document).ready(function(e){
+    mostrarFeed('#correo-orinoco','http://www.correodelorinoco.gob.ve/feed/',10,'co');
+    mostrarFeed('#vtv','http://www.vtv.gob.ve/atom.xml',10,'vtv');
+    mostrarFeed('#yvke','http://www.radiomundial.com.ve/rss.xml',10,'yvke');
+    mostrarFeed('#ciudad-mcy','http://ciudadmcy.info.ve/?format=feed&type=rss',10,'mcy');
+    mostrarFeed('#avn','http://www.avn.info.ve/rss/all',10,'avn');
+    mostrarFeed('#rnv','http://www.rnv.gob.ve/index.php/feed',10,'rnv');
+    mostrarFeed('#actualidad','http://actualidad.rt.com/feeds/short_news.rss',10,'art');
+    mostrarFeed('#laiguana','http://feeds.feedburner.com/laiguana-tv',10,'lg');
+    mostrarFeed('#olabolivariana','http://www.olabolivariana.org.ve/feed',10,'ola');
+    $('#refresh-co').click(function(){
+        mostrarFeed('#correo-orinoco','http://www.correodelorinoco.gob.ve/feed/',10,'co');
+        $.mobile.changePage("#page-correo-orinoco", "slide", false, true);
+        actualizar();
+    });
+    $('#refresh-vtv').click(function(){
+        mostrarFeed('#vtv','http://www.vtv.gob.ve/atom.xml',10,'vtv');
+        $.mobile.changePage("#page-vtv", "slide", false, true);
+        actualizar();
+    });
+    $('#refresh-yvke').click(function(){
+        mostrarFeed('#yvke','http://www.radiomundial.com.ve/rss.xml',10,'yvke');
+        $.mobile.changePage("#page-yvke", "slide", false, true);
+        actualizar();
+    });
+    $('#refresh-mcy').click(function(){
+        mostrarFeed('#ciudad-mcy','http://ciudadmcy.info.ve/?format=feed&type=rss',10,'mcy');
+        $.mobile.changePage("#page-ciudad-mcy", "slide", false, true);
+        actualizar();
+    });
+    $('#refresh-avn').click(function(){
+        mostrarFeed('#avn','http://www.avn.info.ve/rss/all',10,'avn');
+        $.mobile.changePage("#page-avn", "slide", false, true);
+        actualizar();
+    });
+    $('#refresh-rnv').click(function(){
+        mostrarFeed('#rnv','http://www.rnv.gob.ve/index.php/feed',10,'rnv');
+        $.mobile.changePage("#page-rnv", "slide", false, true);
+        actualizar();
+    });
+    $('#refresh-art').click(function(){
+        mostrarFeed('#actualidad','http://actualidad.rt.com/feeds/short_news.rss',10,'art');
+        $.mobile.changePage("#page-actualidadRT", "slide", false, true);
+        actualizar();
+    });
+    $('#refresh-lg').click(function(){
+        mostrarFeed('#laiguana','http://feeds.feedburner.com/laiguana-tv',10,'lg');
+        $.mobile.changePage("#page-la-iguana", "slide", false, true);
+        actualizar();
+    });
+    $('#refresh-ola').click(function(){
+        mostrarFeed('#olabolivariana','http://www.olabolivariana.org.ve/feed',10,'ola');
+        $.mobile.changePage("#page-ola-bolivariana", "slide", false, true);
+        actualizar();
+    });
+    // Mostrar Feeds
+    function mostrarFeed(etiqueta, feed, news,code){
+        $(etiqueta).FeedEk({
+            FeedUrl: feed,
+            MaxCount: news,
+            DescCharacterLimit: 350,
+            Code: code,
+        });
+    };
+    function actualizar(){
+        $.mobile.changePage( "#dialogPage", { role: "dialog", transition: "flip" } );
+        $('#act').html(getFechaHora());
+    }
+    // Mostrar Fecha
+    function getFechaHora(fec){
+	   var fec=new Date; 
+	   var dia=fec.getDate(); 
+	   var mes=fec.getMonth(); 
+	   var anio=fec.getFullYear(); 
+	   var horas = fec.getHours() ; 
+	   var minutos = fec.getMinutes() ; 
+	   var segundos = fec.getSeconds() ; 
+	   if (dia<10) dia='0'+dia; 
+	   if (mes<10) mes='0'+mes; 
+	   if (horas <10) horas = "0" + horas; 
+	   if (minutos <10) minutos = "0" + minutos; 
+	   if (segundos <10) segundos = "0" + segundos; 
+        return dia+'/'+mes+'/'+anio+" a la "+horas+":"+minutos+":"+segundos;  	
+    }
+});
+</script>

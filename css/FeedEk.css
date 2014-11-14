@@ -1,0 +1,21 @@
+.feedEkList{
+    width:94%; 
+    list-style:none outside none;
+    background-color: none; 
+    border:1px solid #D3CAD7; 
+    padding:2% 3%; 
+}
+.feedEkList li{
+    border-bottom:1px solid #D3CAD7; 
+    padding:5px;
+}
+.feedEkList li:last-child{border-bottom:none;}
+.itemTitle a{font-weight:bold; color:#4EBAFF !important; text-decoration:none }
+.itemTitle a:hover{ text-decoration:underline }
+.itemDate a{font-size:11px;color:#AAAAAA !important; text-decoration:none;}
+.itemDate a:hover{color:#AAAAAA;}
+
+.itemContent a{font-weight:normal; color:#fff !important; text-decoration:none }
+.itemContent a:hover{ color: #fff; }
+img { width: 100%; height: auto;}
+.itemContent{ text-align: justify; }
