@@ -4,7 +4,7 @@
    versionCode = "1" 
    xmlns="http://www.w3.org/ns/widgets" 
    xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Ciudad Maracay</name>
+    <name>Medios Oficiales</name>
     <description>
         Lector de Noticias de los Medios Oficiales de Venezuela.
     </description>
